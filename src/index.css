@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300..1000&display=swap');
+
+.radix-themes {
+    --default-font-family: 'Recursive', sans-serif;
+}
+
+.data-pt {
+    font-family: 'Recursive', sans-serif;
+    font-variation-settings: "MONO" 1; 
+}

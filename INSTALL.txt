@@ -1,0 +1,62 @@
+# Installation Instructions
+
+This project consists of a React frontend and a Python backend.
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+-   **Node.js and npm**: Download from [https://nodejs.org/](https://nodejs.org/)
+-   **Python 3.10+**: Download from [https://www.python.org/downloads/](https://www.python.org/downloads/)
+-   **uv**: Install using `pip install uv` or refer to [https://astral.sh/uv/install/](https://astral.sh/uv/install/)
+
+## Setup Steps
+
+1.  **Clone the repository** (if you haven't already):
+    ```bash
+    git clone <repository_url>
+    cd map-app
+    ```
+
+2.  **Frontend Setup (React)**:
+    Navigate to the project root directory.
+    ```bash
+    npm install
+    npm run build
+    ```
+    To run the frontend in development mode:
+    ```bash
+    npm run dev
+    ```
+
+3.  **Backend Setup (Python)**:
+    Navigate to the project root directory.
+    Create a virtual environment using `uv`:
+    ```bash
+    uv venv
+    ```
+    Activate the virtual environment:
+    -   On Windows:
+        ```bash
+        .venv\Scripts\activate
+        ```
+    -   On macOS/Linux:
+        ```bash
+        source .venv/bin/activate
+        ```
+    Install the Python dependencies:
+    ```bash
+    uv pip install -r requirements.txt
+    ```
+    Run the backend server:
+    ```bash
+    uv run python data/data_server.py
+    ```
+    (Note: You might need to adjust the command to run the server based on its actual entry point and how it's designed to be run, e.g., using `uvicorn` if it's a FastAPI app.)
+
+## Running the Application
+
+1.  Start the backend server (as described in step 3 of Backend Setup).
+2.  Start the frontend (as described in step 2 of Frontend Setup, using `npm run dev` for development or serving the `dist` folder for production).
+
+The application should now be accessible in your web browser, typically at `http://localhost:5173` (or the port indicated by `npm run dev`).

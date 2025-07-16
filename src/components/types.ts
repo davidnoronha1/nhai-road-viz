@@ -1,0 +1,123 @@
+export interface PathData {
+  nh_number: string;
+  start_chainage: number;
+  end_chainage: number;
+  length: number;
+  structure_details?: string;
+  l1_start_latitude: number;
+  l1_start_longitude: number;
+  l1_end_latitude: number;
+  l1_end_longitude: number;
+  l2_start_latitude?: number;
+  l2_start_longitude?: number;
+  l2_end_latitude?: number;
+  l2_end_longitude?: number;
+  l3_start_latitude?: number;
+  l3_start_longitude?: number;
+  l3_end_latitude?: number;
+  l3_end_longitude?: number;
+  l4_start_latitude?: number;
+  l4_start_longitude?: number;
+  l4_end_latitude?: number;
+  l4_end_longitude?: number;
+  r1_start_latitude?: number;
+  r1_start_longitude?: number;
+  r1_end_latitude?: number;
+  r1_end_longitude?: number;
+  r2_start_latitude?: number;
+  r2_start_longitude?: number;
+  r2_end_latitude?: number;
+  r2_end_longitude?: number;
+  r3_start_latitude?: number;
+  r3_start_longitude?: number;
+  r3_end_latitude?: number;
+  r3_end_longitude?: number;
+  r4_start_latitude?: number;
+  r4_start_longitude?: number;
+  r4_end_latitude?: number;
+  r4_end_longitude?: number;
+  remark?: string;
+  limitation_of_bi_as_per_morth_circular_in_mm_km?: number;
+  l1_lane_roughness_bi_in_mm_km?: number;
+  l2_lane_roughness_bi_in_mm_km?: number;
+  l3_lane_roughness_bi_in_mm_km?: number;
+  l4_lane_roughness_bi_in_mm_km?: number;
+  r1_lane_roughness_bi_in_mm_km?: number;
+  r2_lane_roughness_bi_in_mm_km?: number;
+  r3_lane_roughness_bi_in_mm_km?: number;
+  r4_lane_roughness_bi_in_mm_km?: number;
+  limitation_of_rut_depth_as_per_concession_agreement_in_mm?: number;
+  l1_rut_depth_in_mm?: number;
+  l2_rut_depth_in_mm?: number;
+  l3_rut_depth_in_mm?: number;
+  l4_rut_depth_in_mm?: number;
+  r1_rut_depth_in_mm?: number;
+  r2_rut_depth_in_mm?: number;
+  r3_rut_depth_in_mm?: number;
+  r4_rut_depth_in_mm?: number;
+  limitation_of_cracking_as_per_concession_agreement_in_area?: number;
+  l1_crack_area_in_area?: number;
+  l2_crack_area_in_area?: number;
+  l3_crack_area_in_area?: number;
+  l4_crack_area_in_area?: number;
+  r1_crack_area_in_area?: number;
+  r2_crack_area_in_area?: number;
+  r3_crack_area_in_area?: number;
+  r4_crack_area_in_area?: number;
+  limitation_of_ravelling_as_per_concession_agreement_in_area?: number;
+  l1_area_area?: number;
+  l2_area_area?: number;
+  l3_area_area?: number;
+  l4_area_area?: number;
+  r1_area_area?: number;
+  r2_area_area?: number;
+  r3_area_area?: number;
+  r4_area_area?: number;
+  overall_quality_score?: number;
+  left_half_quality_score?: number;
+  right_half_quality_score?: number;
+  avg_roughness_score?: number;
+  avg_rut_score?: number;
+  avg_crack_score?: number;
+  avg_ravelling_score?: number;
+  left_roughness_score?: number;
+  left_rut_score?: number;
+  left_crack_score?: number;
+  left_ravelling_score?: number;
+  right_roughness_score?: number;
+  right_rut_score?: number;
+  right_crack_score?: number;
+  right_ravelling_score?: number;
+  avg_roughness_bi?: number;
+  avg_rut_depth?: number;
+  avg_crack_area?: number;
+  avg_ravelling_area?: number;
+  left_avg_roughness_bi?: number;
+  left_avg_rut_depth?: number;
+  left_avg_crack_area?: number;
+  left_avg_ravelling_area?: number;
+  right_avg_roughness_bi?: number;
+  right_avg_rut_depth?: number;
+  right_avg_crack_area?: number;
+  right_avg_ravelling_area?: number;
+}
+
+export interface VideoData {
+  id: number;
+  filename: string;
+  created_at?: string;
+}
+
+export interface FrameData {
+  id: number;
+  video_id: number;
+  frame_number: number;
+  latitude: number;
+  longitude: number;
+  timestamp?: string;
+}
+
+export interface VideoWithCoordinates {
+  video_path: string;
+  coordinates: FrameData[];
+}

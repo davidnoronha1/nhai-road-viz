@@ -1,0 +1,103 @@
+/* Responsive utilities for map application */
+
+/* Mobile-first responsive design */
+@media (max-width: 767px) {
+  /* Mobile specific styles */
+  .map-overlay-panel {
+    font-size: 12px !important;
+    padding: 8px !important;
+  }
+  
+  .map-overlay-panel .rt-Text {
+    font-size: 11px !important;
+  }
+  
+  /* Make sure panels don't overflow on small screens */
+  .map-overlay-panel {
+    max-width: calc(100vw - 20px) !important;
+  }
+  
+  /* Ensure touch targets are large enough */
+  .map-overlay-panel button {
+    min-width: 32px !important;
+    min-height: 32px !important;
+  }
+  
+  /* Improve table readability on mobile */
+  .data-table {
+    font-size: 9px !important;
+  }
+  
+  .data-table .rt-Text {
+    font-size: 8px !important;
+    line-height: 1.2 !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Tablet styles */
+  .map-overlay-panel {
+    font-size: 13px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Desktop styles */
+  .map-overlay-panel {
+    font-size: 14px !important;
+  }
+}
+
+/* Utility classes for responsive visibility */
+.mobile-only {
+  display: block;
+}
+
+.desktop-only {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .mobile-only {
+    display: none;
+  }
+  
+  .desktop-only {
+    display: block;
+  }
+}
+
+/* Ensure better touch interaction on mobile */
+@media (max-width: 767px) {
+  button, .clickable {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Responsive text sizing */
+.responsive-text-sm {
+  font-size: 10px;
+}
+
+.responsive-text-md {
+  font-size: 12px;
+}
+
+.responsive-text-lg {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  .responsive-text-sm {
+    font-size: 12px;
+  }
+  
+  .responsive-text-md {
+    font-size: 14px;
+  }
+  
+  .responsive-text-lg {
+    font-size: 16px;
+  }
+}
